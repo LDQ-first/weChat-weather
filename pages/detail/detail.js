@@ -18,7 +18,6 @@ Page({
   onLoad (options) {
     const _this = this
     console.log('load')
-    console.log('app.globalData: ', app.globalData)
    _this.setData({weather: {}, hidden: false})
     if(app.globalData.weather) {
       app.globalData.weather.future = app.globalData.weather.future.slice(1,8)

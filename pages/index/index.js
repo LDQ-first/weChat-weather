@@ -17,7 +17,6 @@ Page({
 
   onLoad (options) {
     const _this = this
-    console.log('_this: ', _this)
     console.log('load')
     _this.setData({weather: {}, hourly: {}, hidden: false})
     return API.getLocation()
