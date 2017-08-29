@@ -1,0 +1,76 @@
+<!--index.wxml-->
+<scroll-view scroll-y class="page" style="background: url({{weather.bg}})">
+   <view class="head" >
+     <view class="extra clearfix">
+       <text class="city">{{weather.city_name}}</text> 
+       <text class="date">{{weather.format_last_update}}</text> 
+     </view>
+     <view class="main">
+       <view class="weather">{{weather.now.text}}</view>
+       <view class="temperature">{{weather.now.temperature}}<text>℃</text></view>
+       <view class="others">
+          <view class="pm">PM25 {{weather.now.air_quality.city.pm25}}</view>
+          <view class="quality">空气质量 {{weather.now.air_quality.city.quality}}</view>
+          <view class="windDir">风向 {{weather.now.wind_direction}}</view>
+          <view class="wind_speed">风力 {{weather.now.wind_speed}}<text>级</text></view>
+          <view class="humidity">湿度 {{weather.now.humidity}}<text>%</text></view>
+          <view class="visibility">能见度 {{weather.now.visibility}}<text>km</text></view>
+       </view>
+     </view>
+     <scroll-view scroll-x class="hourly">
+       <view class="wrap">
+         <view class="hour" wx:for="{{hourly}}" wx:for-item="item" wx:key="key">
+           <view class="hour-item">{{item.format_time}}</view>
+           <image class="hour-item" src="{{item.img}}"/>
+           <view class="hour-item">{{item.text}}</view>
+           <view class="hour-item">{{item.temperature}}<text>℃</text></view>
+         </view>
+       </view>
+     </scroll-view>
+   </view>
+   <view class="suggestion">
+     <view class="suggestion-title"><text >生活指数</text></view>
+     <view class="travel clearfix">
+       <image src="../../images/background/travel.png" />
+       <view class="detail">
+         <view class="title">{{weather.today.suggestion.travel.brief}}</view>
+         <view class="description">{{weather.today.suggestion.travel.details}}</view>
+       </view>
+     </view>
+     <view class="car_washing">
+      <image src="../../images/background/car_washing.png" />
+      <view class="detail clearfix">
+        <view class="title">{{weather.today.suggestion.car_washing.brief}}</view>
+        <view class="description">{{weather.today.suggestion.car_washing.details}}</view>
+      </view>
+    </view>
+    <view class="dressing clearfix">
+      <image src="../../images/background/dressing.png" />
+      <view class="detail">
+        <view class="title">{{weather.today.suggestion.dressing.brief}}</view>
+        <view class="description">{{weather.today.suggestion.dressing.details}}</view>
+      </view>
+    </view>
+    <view class="flu clearfix">
+      <image src="../../images/background/flu.png" />
+      <view class="detail">
+        <view class="title">{{weather.today.suggestion.flu.brief}}</view>
+        <view class="description">{{weather.today.suggestion.flu.details}}</view>
+      </view>
+    </view>
+    <view class="uv clearfix">
+      <image src="../../images/background/uv.png" />
+      <view class="detail">
+        <view class="title">{{weather.today.suggestion.uv.brief}}</view>
+        <view class="description">{{weather.today.suggestion.uv.details}}</view>
+      </view>
+    </view>
+    <view class="sport clearfix">
+      <image src="../../images/background/sport.png" />
+      <view class="detail">
+        <view class="title">{{weather.today.suggestion.sport.brief}}</view>
+        <view class="description">{{weather.today.suggestion.sport.details}}</view>
+      </view>
+    </view>  
+   </view>
+</scroll-view>
