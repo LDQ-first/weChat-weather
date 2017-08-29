@@ -1,0 +1,18 @@
+
+.day {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30rpx 0;
+  color: #FFF;
+}
+
+.day>view {
+  flex: 1;
+  text-align: center;
+}
+
+.day image {
+  width: 100rpx;
+  height: 100rpx;
+}

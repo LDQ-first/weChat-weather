@@ -8,7 +8,7 @@
     "navigationBarBackgroundColor": "rgba(3,169,244,1)",
     "navigationBarTitleText": "天气预报",
     "navigationBarTextStyle":"white",
-    "backgroundColor": "#ccccc"
+    "backgroundColor": "rgba(3,169,244,1)"
   },
   "tabBar": {
     "list": [
@@ -20,7 +20,7 @@
       },
       {
          "pagePath": "pages/detail/detail",
-         "text": "未来几天",
+         "text": "未来7天",
          "iconPath": "images/future.png",
          "selectedIconPath": "images/future-select.png"
       }

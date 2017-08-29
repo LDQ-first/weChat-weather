@@ -1,5 +1,9 @@
 <!--index.wxml-->
-<scroll-view scroll-y class="page" style="background: url({{weather.bg}})">
+<!--<scroll-view scroll-y class="page" style="background: url({{weather.bg}});" >-->
+<view class="page" style="background: url({{weather.bg}});">
+   <loading hidden="{{hidden}}"> 
+    加载中... 
+  </loading>
    <view class="head" >
      <view class="extra clearfix">
        <text class="city">{{weather.city_name}}</text> 
@@ -73,4 +77,5 @@
       </view>
     </view>  
    </view>
-</scroll-view>
+</view>
+<!--</scroll-view>-->

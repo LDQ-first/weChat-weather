@@ -1,0 +1,18 @@
+<view class="page">
+  <loading hidden="{{hidden}}"> 
+    加载中... 
+  </loading>
+    <view class="head"  style="background-image: url({{weather.bg}})">
+        <view class="day" wx:for="{{weather.future}}" wx:for-item="item" wx:key="key">
+            <view>{{item.day}}</view>
+            <view>{{item.text}}</view>
+            <view class="item">
+                <image src="../../images/weather/{{item.code1}}.png" />
+                <image src="../../images/weather/{{item.code2}}.png" /> 
+            </view>
+            <view class="temp">
+                {{item.low}}°～ {{item.high}}°
+            </view>
+        </view>
+    </view>
+</view>
